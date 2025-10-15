@@ -20,7 +20,7 @@ export default function CompletionScreen({ onRestart }: CompletionScreenProps) {
 
           <div className="mb-8">
             <img
-              src="/862ab574-8210-4d60-bcec-787ee83788cf.jpg"
+              src="862ab574-8210-4d60-bcec-787ee83788cf.jpg"
               alt="Бобр"
               className="w-64 h-64 mx-auto object-contain mb-6"
             />

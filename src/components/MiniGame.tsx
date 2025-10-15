@@ -21,11 +21,11 @@ const elements: EnergyElement[] = [
 ];
 
 const hints = [
-  { step: 0, text: 'С чего всё начинается? Где рождается электричество?', childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg' },
-  { step: 1, text: 'Нужно поднять напряжение для передачи!', childImage: '/a8c464db-834a-41b1-ba57-604d9972c450.jpg' },
-  { step: 2, text: 'Теперь по каким проводам идёт ток?', childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg' },
-  { step: 3, text: 'Перед домом нужно понизить напряжение до безопасного!', childImage: '/a8c464db-834a-41b1-ba57-604d9972c450.jpg' },
-  { step: 4, text: 'И наконец - куда попадает электричество?', childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg' }
+  { step: 0, text: 'С чего всё начинается? Где рождается электричество?', childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg' },
+  { step: 1, text: 'Нужно поднять напряжение для передачи!', childImage: 'a8c464db-834a-41b1-ba57-604d9972c450.jpg' },
+  { step: 2, text: 'Теперь по каким проводам идёт ток?', childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg' },
+  { step: 3, text: 'Перед домом нужно понизить напряжение до безопасного!', childImage: 'a8c464db-834a-41b1-ba57-604d9972c450.jpg' },
+  { step: 4, text: 'И наконец - куда попадает электричество?', childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg' }
 ];
 
 export default function MiniGame({ onComplete }: MiniGameProps) {

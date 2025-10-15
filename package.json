@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://kolia261.github.io/Rushydroeducate",
+  "homepage": "http://kolia261.github.io/Rushydroeducate/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

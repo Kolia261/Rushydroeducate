@@ -26,7 +26,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'А как именно работает электростанция?',
-    childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
+    childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
   },
   {
     speaker: 'beaver',
@@ -35,7 +35,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'А сколько электричества производит одна станция?',
-    childImage: '/a8c464db-834a-41b1-ba57-604d9972c450.jpg'
+    childImage: 'a8c464db-834a-41b1-ba57-604d9972c450.jpg'
   },
   {
     speaker: 'beaver',
@@ -49,7 +49,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'Зачем нужно такое высокое напряжение?',
-    childImage: '/a8c464db-834a-41b1-ba57-604d9972c450.jpg'
+    childImage: 'a8c464db-834a-41b1-ba57-604d9972c450.jpg'
   },
   {
     speaker: 'beaver',
@@ -58,7 +58,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'А это не опасно для людей?',
-    childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
+    childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
   },
   {
     speaker: 'beaver',
@@ -72,7 +72,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'Как трансформатор изменяет напряжение?',
-    childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
+    childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
   },
   {
     speaker: 'beaver',
@@ -86,7 +86,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'Почему провода висят так высоко?',
-    childImage: '/a8c464db-834a-41b1-ba57-604d9972c450.jpg'
+    childImage: 'a8c464db-834a-41b1-ba57-604d9972c450.jpg'
   },
   {
     speaker: 'beaver',
@@ -95,7 +95,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'А птицы не получают удар током на проводах?',
-    childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
+    childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
   },
   {
     speaker: 'beaver',
@@ -109,7 +109,7 @@ const dialogueSteps: DialogueStep[] = [
   {
     speaker: 'child',
     text: 'Почему именно 220 вольт?',
-    childImage: '/68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
+    childImage: '68d30f9c-b495-406a-ac85-ec3769eb0928.jpg'
   },
   {
     speaker: 'beaver',
@@ -163,7 +163,7 @@ export default function TheorySection({ onComplete }: TheorySectionProps) {
               {currentDialogue.speaker === 'beaver' ? (
                 <>
                   <img
-                    src="/862ab574-8210-4d60-bcec-787ee83788cf.jpg"
+                    src="862ab574-8210-4d60-bcec-787ee83788cf.jpg"
                     alt="Бобр"
                     className="w-48 h-48 object-contain flex-shrink-0"
                   />
