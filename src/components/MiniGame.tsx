@@ -98,9 +98,9 @@ export default function MiniGame({ onComplete }: MiniGameProps) {
   const currentHint = hints[currentHintIndex];
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-500">
+    <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-8 bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-500">
       <div className="max-w-7xl w-full">
-        <div className="bg-white rounded-3xl shadow-2xl p-8 relative overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-2xl p-3 sm:p-6 md:p-8 relative overflow-hidden">
           {showSuccessAnimation && (
             <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center z-50 animate-pulse">
               <div className="text-center text-white">
@@ -111,44 +111,44 @@ export default function MiniGame({ onComplete }: MiniGameProps) {
             </div>
           )}
 
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2 bg-blue-100 px-4 py-2 rounded-full">
-                <Timer className="w-5 h-5 text-blue-600" />
-                <span className="text-xl font-bold text-blue-600">{formatTime(timer)}</span>
+          <div className="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6 gap-2 sm:gap-0">
+            <div className="flex items-center gap-3 sm:gap-6 mb-2 sm:mb-0">
+              <div className="flex items-center gap-2 bg-blue-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                <Timer className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+                <span className="text-lg sm:text-xl font-bold text-blue-600">{formatTime(timer)}</span>
               </div>
-              <div className="bg-orange-100 px-4 py-2 rounded-full">
-                <span className="text-xl font-bold text-orange-600">Ошибки: {attempts}</span>
+              <div className="bg-orange-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                <span className="text-lg sm:text-xl font-bold text-orange-600">Ошибки: {attempts}</span>
               </div>
             </div>
             <img
               src="/862ab574-8210-4d60-bcec-787ee83788cf.jpg"
               alt="Бобр"
-              className="w-20 h-20 object-contain"
+              className="w-14 h-14 sm:w-20 sm:h-20 object-contain"
             />
           </div>
 
-          <div className="text-center mb-6">
-            <h2 className="text-4xl font-bold text-blue-600 mb-2">
+          <div className="text-center mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">
               Помоги собрать цепочку!
             </h2>
-            <p className="text-lg text-gray-600">
-              Выбирай элементы по порядку. Если ошибёшься - попробуешь снова!
+            <p className="text-base sm:text-lg text-gray-600">
+              Выбирай элементы по порядку. Если ошибёшься — попробуешь снова!
             </p>
           </div>
 
           {currentHint && selectedElements.length < elements.length && (
-            <div className="mb-8 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-6 border-2 border-yellow-300">
-              <div className="flex items-center gap-4">
+            <div className="mb-6 sm:mb-8 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-3 sm:p-6 border-2 border-yellow-300">
+              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                 <img
                   src={currentHint.childImage}
                   alt="Подсказка"
-                  className="w-24 h-24 object-contain flex-shrink-0"
+                  className="w-16 h-16 sm:w-24 sm:h-24 object-contain flex-shrink-0 mb-2 sm:mb-0"
                 />
                 <div className="flex-1">
-                  <div className="bg-white rounded-xl p-4 relative shadow-lg">
-                    <div className="absolute -left-3 top-6 w-6 h-6 bg-white transform rotate-45" />
-                    <p className="text-lg font-medium text-gray-800">
+                  <div className="bg-white rounded-xl p-2 sm:p-4 relative shadow-lg">
+                    <div className="hidden sm:block absolute -left-3 top-6 w-6 h-6 bg-white transform rotate-45" />
+                    <p className="text-base sm:text-lg font-medium text-gray-800">
                       {currentHint.text}
                     </p>
                   </div>
@@ -157,57 +157,57 @@ export default function MiniGame({ onComplete }: MiniGameProps) {
             </div>
           )}
 
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-yellow-500" />
+          <div className="mb-6 sm:mb-8">
+            <h3 className="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 sm:mb-4 flex items-center gap-2">
+              <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500" />
               Собранная цепочка:
             </h3>
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 min-h-[180px] border-2 border-blue-200">
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-4 sm:p-8 min-h-[120px] sm:min-h-[180px] border-2 border-blue-200">
               {selectedElements.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center">
-                  <p className="text-gray-500 text-xl mb-4">
+                  <p className="text-gray-500 text-base sm:text-xl mb-2 sm:mb-4">
                     Начни с первого элемента!
                   </p>
-                  <ArrowRight className="w-12 h-12 text-gray-400 animate-bounce" />
+                  <ArrowRight className="w-8 h-8 sm:w-12 sm:h-12 text-gray-400 animate-bounce" />
                 </div>
               ) : (
-                <div className="flex items-center justify-start gap-3 flex-wrap">
+                <div className="flex items-center justify-start gap-2 sm:gap-3 flex-wrap">
                   {selectedElements.map((element, index) => (
-                    <div key={element.id} className="flex items-center gap-3">
-                      <div className="bg-white rounded-xl p-4 shadow-lg border-4 border-green-400 transform hover:scale-105 transition-all">
-                        <div className="text-green-600 mb-2 flex justify-center">
+                    <div key={element.id} className="flex items-center gap-2 sm:gap-3">
+                      <div className="bg-white rounded-xl p-2 sm:p-4 shadow-lg border-2 sm:border-4 border-green-400 transform hover:scale-105 transition-all">
+                        <div className="text-green-600 mb-1 sm:mb-2 flex justify-center">
                           {element.icon}
                         </div>
-                        <p className="text-sm font-semibold text-center text-gray-800 min-w-[120px]">
+                        <p className="text-xs sm:text-sm font-semibold text-center text-gray-800 min-w-[80px] sm:min-w-[120px]">
                           {element.name}
                         </p>
                       </div>
                       {index < selectedElements.length - 1 && (
-                        <ArrowRight className="w-8 h-8 text-green-500" />
+                        <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
                       )}
                     </div>
                   ))}
                   {selectedElements.length < elements.length && (
-                    <div className="text-4xl text-gray-300">?</div>
+                    <div className="text-2xl sm:text-4xl text-gray-300">?</div>
                   )}
                 </div>
               )}
             </div>
           </div>
 
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Выбери следующий элемент:</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="mb-6 sm:mb-8">
+            <h3 className="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 sm:mb-4">Выбери следующий элемент:</h3>
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-4">
               {availableElements.map(element => (
                 <div
                   key={element.id}
                   onClick={() => handleSelectElement(element)}
-                  className="bg-gradient-to-br from-orange-400 to-amber-500 rounded-xl p-4 shadow-lg cursor-pointer hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:rotate-3"
+                  className="bg-gradient-to-br from-orange-400 to-amber-500 rounded-xl p-2 sm:p-4 shadow-lg cursor-pointer hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:rotate-3"
                 >
-                  <div className="text-white mb-2 flex justify-center">
+                  <div className="text-white mb-1 sm:mb-2 flex justify-center">
                     {element.icon}
                   </div>
-                  <p className="text-sm font-semibold text-center text-white">
+                  <p className="text-xs sm:text-sm font-semibold text-center text-white">
                     {element.name}
                   </p>
                 </div>
@@ -215,10 +215,10 @@ export default function MiniGame({ onComplete }: MiniGameProps) {
             </div>
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-2 sm:gap-4">
             <button
               onClick={handleReset}
-              className="bg-gray-500 hover:bg-gray-600 text-white font-bold text-xl py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="bg-gray-500 hover:bg-gray-600 text-white font-bold text-base sm:text-xl py-3 sm:py-4 px-6 sm:px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Начать заново
             </button>

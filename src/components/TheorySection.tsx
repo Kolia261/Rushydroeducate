@@ -142,35 +142,35 @@ export default function TheorySection({ onComplete }: TheorySectionProps) {
   const currentDialogue = dialogueSteps[currentStep];
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-8">
+    <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-8">
       <div className="max-w-6xl w-full">
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <div className="bg-gradient-to-r from-orange-500 to-amber-500 h-3">
+          <div className="bg-gradient-to-r from-orange-500 to-amber-500 h-2 sm:h-3">
             <div
               className="bg-gradient-to-r from-green-400 to-green-600 h-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
 
-          <div className="p-12">
+          <div className="p-4 sm:p-8 md:p-12">
             {currentDialogue.title && (
-              <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600 mb-4 sm:mb-6 text-center">
                 {currentDialogue.title}
               </h2>
             )}
 
-            <div className="flex items-start gap-8 mb-8">
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8 mb-6 md:mb-8">
               {currentDialogue.speaker === 'beaver' ? (
                 <>
                   <img
                     src="862ab574-8210-4d60-bcec-787ee83788cf.jpg"
                     alt="Бобр"
-                    className="w-48 h-48 object-contain flex-shrink-0"
+                    className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 object-contain flex-shrink-0 mx-auto md:mx-0"
                   />
                   <div className="flex-1">
-                    <div className="bg-blue-50 rounded-2xl p-8 relative">
-                      <div className="absolute -left-4 top-8 w-8 h-8 bg-blue-50 transform rotate-45" />
-                      <p className="text-xl text-gray-800 leading-relaxed">
+                    <div className="bg-blue-50 rounded-2xl p-4 sm:p-6 md:p-8 relative">
+                      <div className="hidden md:block absolute -left-4 top-8 w-8 h-8 bg-blue-50 transform rotate-45" />
+                      <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed">
                         {currentDialogue.text}
                       </p>
                     </div>
@@ -179,9 +179,9 @@ export default function TheorySection({ onComplete }: TheorySectionProps) {
               ) : (
                 <>
                   <div className="flex-1">
-                    <div className="bg-yellow-50 rounded-2xl p-8 relative border-2 border-yellow-300">
-                      <div className="absolute -right-4 top-8 w-8 h-8 bg-yellow-50 transform rotate-45 border-r-2 border-t-2 border-yellow-300" />
-                      <p className="text-xl text-gray-800 leading-relaxed font-medium">
+                    <div className="bg-yellow-50 rounded-2xl p-4 sm:p-6 md:p-8 relative border-2 border-yellow-300">
+                      <div className="hidden md:block absolute -right-4 top-8 w-8 h-8 bg-yellow-50 transform rotate-45 border-r-2 border-t-2 border-yellow-300" />
+                      <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed font-medium">
                         {currentDialogue.text}
                       </p>
                     </div>
@@ -189,23 +189,23 @@ export default function TheorySection({ onComplete }: TheorySectionProps) {
                   <img
                     src={currentDialogue.childImage}
                     alt="Ребенок"
-                    className="w-48 h-48 object-contain flex-shrink-0"
+                    className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 object-contain flex-shrink-0 mx-auto md:mx-0"
                   />
                 </>
               )}
             </div>
 
-            <div className="flex justify-between items-center">
-              <div className="text-sm text-gray-500">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
+              <div className="text-xs sm:text-sm text-gray-500 mb-2 sm:mb-0">
                 Шаг {currentStep + 1} из {dialogueSteps.length}
               </div>
 
               <button
                 onClick={handleNext}
-                className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xl py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-base sm:text-lg md:text-xl py-3 sm:py-4 px-6 sm:px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 {currentStep < dialogueSteps.length - 1 ? 'Дальше' : 'К игре!'}
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
           </div>
